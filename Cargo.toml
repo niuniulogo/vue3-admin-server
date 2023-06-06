@@ -1,0 +1,37 @@
+[package]
+name = "niuniu-rust-web"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#异步框架
+tokio = { version = "1.28.2", features = ["full"] }
+
+# josn 序列化 serde
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = "2"
+
+# web框架 axum
+axum = { version = "0.6.12", features = ["headers"] }
+thiserror = "1.0.29"
+#环境变量工具。本例中将使用此工具处理数据库连接字符串。 dotenv
+dotenv = "0.15.0"
+#时间和日期工具 chrono
+chrono = { version = "0.4.19", features = ["serde"] }
+#参数验证插件  validator
+validator = { version = "0.14.0", features = ["derive"] }
+#用于解决跨域的 中间件  tower-http 
+tower-http = { version = "0.3.4", features = ["cors"] }
+#操作数据库的 插件 sqlx
+sqlx = { version = "0.6.3", features = [
+    "postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "chrono",
+] }
+
+
+
