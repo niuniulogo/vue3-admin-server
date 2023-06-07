@@ -1,6 +1,4 @@
-用于创建 web 后台模版
-
-
+#vue3-admin 后台服务
 
 Cargo.toml: Rust项目配置文件，包含依赖项和其他配置。
 src/: 项目源代码目录。
@@ -14,6 +12,10 @@ src/schema.sql: 数据库模式，定义数据库表格结构。
 
 db.env: 包含连接PostgreSQL数据库所需的环境变量。
 
+
+
+#todo！token
+#todo！redis
 
 
 项目运行
